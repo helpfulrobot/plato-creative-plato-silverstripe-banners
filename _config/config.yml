@@ -1,0 +1,14 @@
+---
+Name: plato-silverstripe-banners
+After:
+  - 'framework/*'
+  - 'cms/*'
+---
+Page:
+  extensions:
+    - PageExtension
+  BannerExcludedPageTypes:
+    - HomePage
+Page_Controller:
+  extensions:
+    - Page_ControllerExtension
