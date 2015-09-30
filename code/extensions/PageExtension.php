@@ -32,4 +32,12 @@ class PageExtension extends DataExtension
 
         return $fields;
     }
+
+    /**
+     * @return Int
+     * @config()
+     */
+    public function getBannerLayout() {
+        return ($this->owner->config()->BannerLayout ? $this->owner->config()->BannerLayout : 1);
+    }
 }
