@@ -9,7 +9,6 @@ Page:
     - PageExtension
   BannerExcludedPageTypes:
     - HomePage
-  BannerLayout: 1
 Page_Controller:
   extensions:
     - Page_ControllerExtension
