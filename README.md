@@ -2,7 +2,7 @@
 Plato's Home Slides module for the base installer. Please see requirements before installing.
 
 ### Requirements
-+ SilverStripe 3.1.*
++ SilverStripe 3.2.*
 + Foundation 5 (html/css framework)
 
 ### Installation
