@@ -7,18 +7,18 @@
 class PageExtension extends DataExtension
 {
     /**
-	 * @var array
-	 */
+     * @var array
+     */
     private static $db = array(
         "BannerTitle" => "Varchar(255)"
     );
 
     /**
-	 * @var array
-	 */
+     * @var array
+     */
     private static $has_one = array(
-		"BannerImage" => "Image"
-	);
+        "BannerImage" => "Image"
+    );
 
     /**
      * @return FieldList
@@ -26,8 +26,8 @@ class PageExtension extends DataExtension
     public function updateCMSFields(FieldList $fields)
     {
         if (!in_array($this->owner->ClassName, $this->owner->config()->BannerExcludedPageTypes)) {
-             $fields->addFieldToTab('Root.Banner', TextField::create("BannerTitle", "Title")->setDescription("Title of the banner"));
-             $fields->addFieldToTab('Root.Banner', UploadField::create("BannerImage", "Banner Image")->setFolderName("Banners"));
+            $fields->addFieldToTab('Root.Banner', TextField::create("BannerTitle", "Title")->setDescription("Title of the banner"));
+            $fields->addFieldToTab('Root.Banner', UploadField::create("BannerImage", "Banner Image")->setFolderName("Banners"));
         }
 
         return $fields;
@@ -37,7 +37,8 @@ class PageExtension extends DataExtension
      * @return Int
      * @config()
      */
-    public function getBannerLayout() {
+    public function getBannerLayout()
+    {
         return ($this->owner->config()->BannerLayout ? $this->owner->config()->BannerLayout : 1);
     }
 }
